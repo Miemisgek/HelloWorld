@@ -16,10 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
 
+<<<<<<< HEAD
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
@@ -43,77 +41,64 @@ body {
     padding:0px;
     text-transform:uppercase;
     width:100%;
-}
-
-/* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
-}
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
-}
-
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
-
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
-}
-
-.event.listening {
-    background-color:#333333;
-    display:block;
-}
-
-.event.received {
-    background-color:#4B946A;
-    display:none;
-}
-
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
+=======
  
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
+ body{ 
+background-color:#f2f2f2;
+margin:0;
+padding:0;
+>>>>>>> origin/master
 }
 
+.container{ 
+width:auto; 
+}
+
+header{ 
+width:auto; 
+height:105px;
+}
+
+.upperheader{ 
+width:auto;
+height:30px; 
+background-color: #f678c5;
+} 
+
+.officialheader{ 
+width:auto; 
+height:75px;
+background-color: #f890d0;
+}
+
+article.login{ 
+width:auto;
+margin: 25px;
+}
+
+input.fields{ 
+  width: 100%;
+  margin: 5px 0; 
+  padding: 15px 0px;
+  font-family:;
+  border: solid 1px #e4e3e3;
+}
+
+input[placeholder]{
+text-align:center;
+}
+
+input.button{ 
+margin: 5px auto;
+  display: block;
+  width: 100%;
+  background-color:#f890d0;
+  color:white;
+  border: none;
+  height: 45px;
+}
+
+<<<<<<< HEAD
 /*MARITA*/
 .menu{
 	background-color: red;
@@ -133,3 +118,13 @@ h1 {
 	background-color: black;
 }
 
+=======
+h1{ 
+margin:0px auto;
+font-family: ;
+font-size: 29px;
+color: white;
+text-align: center;
+padding: 21px;
+}
+>>>>>>> origin/master
