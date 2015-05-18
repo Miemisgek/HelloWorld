@@ -47,7 +47,8 @@ background-color: #f890d0;
 
 article.login{ 
 width:auto;
-margin: 25px;
+height:auto;
+margin: 250px 25px;
 }
 
 input.fields{ 
@@ -55,7 +56,10 @@ input.fields{
   margin: 5px 0; 
   padding: 15px 0px;
   font-family:;
+  font-size: 22px;
   border: solid 1px #e4e3e3;
+  border-radius:5px;
+  color:#f890d0;
 }
 
 input[placeholder]{
@@ -63,13 +67,15 @@ text-align:center;
 }
 
 input.button{ 
-margin: 5px auto;
+margin: 25px auto;
   display: block;
   width: 100%;
   background-color:#f890d0;
   color:white;
   border: none;
-  height: 45px;
+  height: 65px;
+  font-size: 22px;
+  border-radius:5px;
 }
 
 h1{ 
