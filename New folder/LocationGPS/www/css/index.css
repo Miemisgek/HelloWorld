@@ -16,9 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
-<<<<<<< HEAD
-body {
+/*body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
@@ -33,7 +31,7 @@ body {
         color-stop(0, #A7A7A7),
         color-stop(0.51, #E4E4E4)
     );
-    background-attachment:fixed;*/
+    background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
     height:100%;
@@ -41,13 +39,33 @@ body {
     padding:0px;
     text-transform:uppercase;
     width:100%;
-=======
+}*/
+
+@font-face {
+    font-family: 'GeomanistRegular';
+    src: url('fonts/GeomanistRegular.eot');
+    src: url('fonts/GeomanistRegular.eot') format('embedded-opentype'),
+         url('fonts/GeomanistRegular.woff2') format('woff2'),
+         url('fonts/GeomanistRegular.woff') format('woff'),
+         url('fonts/GeomanistRegular.ttf') format('truetype'),
+         url('fonts/GeomanistRegular.svg#GeomanistRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'HeroLight';
+    src: url('fonts/HeroLight.eot');
+    src: url('fonts/HeroLight.eot') format('embedded-opentype'),
+         url('fonts/HeroLight.woff2') format('woff2'),
+         url('fonts/HeroLight.woff') format('woff'),
+         url('fonts/HeroLight.ttf') format('truetype'),
+         url('fonts/HeroLight.svg#HeroLight') format('svg');
+}
  
- body{ 
+body{
+font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; 
 background-color:#f2f2f2;
 margin:0;
 padding:0;
->>>>>>> origin/master
 }
 
 .container{ 
@@ -69,6 +87,7 @@ background-color: #f678c5;
 width:auto; 
 height:75px;
 background-color: #f890d0;
+font-family: 'HeroLight';
 }
 
 article.login{ 
@@ -98,15 +117,16 @@ margin: 5px auto;
   height: 45px;
 }
 
-<<<<<<< HEAD
 /*MARITA*/
 .menu{
-	background-color: red;
+	background-color: #f890d0;
 	width:100%;
 	height: 30px;
 	top: 0;	
 	text-align: center;
 	line-height: 30px;
+	color: white;
+    font-family: 'HeroLight';
 }
 
 .tabblad{
@@ -117,8 +137,8 @@ margin: 5px auto;
 	float:left;
 	background-color: black;
 }
+/*END MARITA*/
 
-=======
 h1{ 
 margin:0px auto;
 font-family: ;
@@ -127,4 +147,4 @@ color: white;
 text-align: center;
 padding: 21px;
 }
->>>>>>> origin/master
+
