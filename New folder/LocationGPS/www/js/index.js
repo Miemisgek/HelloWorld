@@ -22,23 +22,12 @@
 
 navigator.geolocation.getCurrentPosition(onSuccess, onError);*/
 
-/*function page_listofmembers(){
-	windows.location ='listoftargets.html';
-	return false;
-}*/
-
-/*function getValuesForm(){
-	var name = $('#name').val();
-    var password = $('#password').val();
-	
-	valuesToAjax(name, password);
-	
-	window.location = "dashboard.html";
-	return false;
-}
-
-*/
 $("#loginForm").submit(function(){
+	window.location = "dashboard.html";
+	return false;	
+});
+
+$("#registerForm").submit(function(){
 	var name = $('#name').val();
     var password = $('#password').val();
 	
@@ -80,7 +69,11 @@ $("#loginForm").submit(function(){
 			window.location = "dashboard.html";
 		}
 	});
-	
 	return false;
 	
+});
+
+$('#register').click(function(){
+	window.location = "register.html";
+	return false;
 });

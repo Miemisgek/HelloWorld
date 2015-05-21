@@ -65,7 +65,7 @@ input.fields{
   color:#f890d0;
 }
 
-#submitRegister{ 
+#submitLogin, #register, #submitRegister{ 
 margin: 25px auto;
   display: block;
   width: 100%;
@@ -76,6 +76,12 @@ margin: 25px auto;
   font-family: 'HeroLight';
   font-size: 22px;
   border-radius:5px;
+  cursor: pointer;
+}
+
+#register{
+	background-color:#CCC;
+	height: 50px;
 }
 
 input[placeholder]{
@@ -83,7 +89,7 @@ text-align:center;
 }
 
 input.button{ 
-margin: 25px auto;
+  margin: 25px auto;
   display: block;
   width: 100%;
   background-color:#f890d0;
