@@ -23,7 +23,27 @@
 navigator.geolocation.getCurrentPosition(onSuccess, onError);*/
 
 $("#loginForm").submit(function(){
-	window.location = "dashboard.html";
+	var name = $('#name').val();
+    var password = $('#password').val();
+	
+	if (name == "" || password == "") {
+	alert("Vul alles in aub");
+	return false;
+	}	
+	
+	$.ajax({
+		type: "GET",
+		url: "http://maritapeeters.nl/PeriodSaver/login.php?name=" + name + "&password=" + password,
+		dataType: "json",
+		success: function(data) {
+			console.log(data);
+			window.location = "dashboard.html";
+		},
+		error: function(data) {
+			console.log("ERROR" + data );
+			window.location = "dashboard.html";
+		}
+	});
 	return false;	
 });
 
@@ -34,26 +54,7 @@ $("#registerForm").submit(function(){
 	if (name == "" || password == "") {
 		alert("Vul alles in aub");
 	return false;
-	}
-/*	$.ajax({
-       type: "POST",
-        url: "http://maritapeeters.nl/PeriodSaver/save.php",
-        contentType: "application/json",
-        dataType: 'jsonp',
-       	data:JSON.stringify({
-           name:name,
-           password:password
-       }),
-       success: function() {
-         alert('success');
-       },
-	   error: function() {
-   		alert("ERROR");
- 		 }
-    });
-    console.log(name, password);
-	return false;*/
-	
+	}	
 	console.log(name, password);
 	
 	$.ajax({
@@ -70,7 +71,6 @@ $("#registerForm").submit(function(){
 		}
 	});
 	return false;
-	
 });
 
 $('#register').click(function(){
