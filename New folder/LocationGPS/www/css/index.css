@@ -65,6 +65,19 @@ input.fields{
   color:#f890d0;
 }
 
+#submitRegister{ 
+margin: 25px auto;
+  display: block;
+  width: 100%;
+  background-color:#f890d0;
+  color:white;
+  border: none;
+  height: 65px;
+  font-family: 'HeroLight';
+  font-size: 22px;
+  border-radius:5px;
+}
+
 input[placeholder]{
 text-align:center;
 }

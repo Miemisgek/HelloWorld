@@ -22,7 +22,65 @@
 
 navigator.geolocation.getCurrentPosition(onSuccess, onError);*/
 
-function page_listofmembers(){
+/*function page_listofmembers(){
 	windows.location ='listoftargets.html';
 	return false;
+}*/
+
+/*function getValuesForm(){
+	var name = $('#name').val();
+    var password = $('#password').val();
+	
+	valuesToAjax(name, password);
+	
+	window.location = "dashboard.html";
+	return false;
 }
+
+*/
+$("#loginForm").submit(function(){
+	var name = $('#name').val();
+    var password = $('#password').val();
+	
+	if (name == "" || password == "") {
+		alert("Vul alles in aub");
+	return false;
+	}
+/*	$.ajax({
+       type: "POST",
+        url: "http://maritapeeters.nl/PeriodSaver/save.php",
+        contentType: "application/json",
+        dataType: 'jsonp',
+       	data:JSON.stringify({
+           name:name,
+           password:password
+       }),
+       success: function() {
+         alert('success');
+       },
+	   error: function() {
+   		alert("ERROR");
+ 		 }
+    });
+    console.log(name, password);
+	return false;*/
+	
+	console.log(name, password);
+	
+	$.ajax({
+		type: "GET",
+		url: "http://maritapeeters.nl/PeriodSaver/save.php?name=" + name + "&password=" + password,
+		dataType: "json",
+		success: function(data) {
+			console.log(data);
+			window.location = "dashboard.html";
+		},
+		error: function(data) {
+			console.log("ERROR" + data );
+			window.location = "dashboard.html";
+		}
+	});
+	
+	return false;
+	
+});
