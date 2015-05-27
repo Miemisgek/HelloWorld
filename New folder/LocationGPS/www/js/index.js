@@ -1,7 +1,3 @@
-// onSuccess Callback
-// This method accepts a Position object, which contains the
-// current GPS coordinates
-//
 /*var onSuccess = function(position) {
 		alert('Latitude: '          + position.coords.latitude          + '\n' +
 			  'Longitude: '         + position.coords.longitude         + '\n' +
@@ -28,22 +24,22 @@ $("#loginForm").submit(function(){
 	
 	if (name == "" || password == "") {
 	alert("Vul alles in aub");
-	return false;
 	}	
 	
 	$.ajax({
 		type: "GET",
-		url: "http://maritapeeters.nl/PeriodSaver/login.php?name=" + name + "&password=" + password,
+		url: "http://maritapeeters.nl/periodsaver/login.php?name=" + name + "&password=" + password,
 		dataType: "json",
 		success: function(data) {
 			console.log(data);
-			window.location = "dashboard.html";
+			window.location = "listoftargets.html";
 		},
 		error: function(data) {
 			console.log("ERROR" + data );
-			window.location = "dashboard.html";
+			window.location = "index.html";
 		}
 	});
+	
 	return false;	
 });
 
@@ -52,24 +48,24 @@ $("#registerForm").submit(function(){
     var password = $('#password').val();
 	
 	if (name == "" || password == "") {
-		alert("Vul alles in aub");
-	return false;
+	alert("Vul een gebruikersnaam en wachtwoord in");
 	}	
 	console.log(name, password);
 	
 	$.ajax({
 		type: "GET",
-		url: "http://maritapeeters.nl/PeriodSaver/save.php?name=" + name + "&password=" + password,
+		url: "http://maritapeeters.nl/periodsaver/save.php?name=" + name + "&password=" + password,
 		dataType: "json",
 		success: function(data) {
 			console.log(data);
-			window.location = "dashboard.html";
+			window.location = "listoftargets.html";
 		},
 		error: function(data) {
 			console.log("ERROR" + data );
-			window.location = "dashboard.html";
+			//window.location = "index.html";
 		}
 	});
+	
 	return false;
 });
 
