@@ -7,12 +7,16 @@
 <i>1. Register & login</i>
 <p>The registerpage is short and simple. The user has to fill in her username and a password and indicate wether she is in need of sanitary pads or if she wants to help someone. The brand and sort are optional.</p>
 <p>The loginpage is very simple. The user fills in her username and password and tabs the button "login"</p>
-<p>To view how it's done, please take a look at the js and html files</p>
+<p>To view how it's done, please take a look at the comments in the js and html files</p>
 
 <i>2. Displaying list of superwomen</i>
 <p>When a user asks for help a list of potential helpers is shown. This list is based on the distance between the user and women who happen to be in the possession of sanitary pads. The distance is calculated using the latitude and longitude, who will be refreshed every 30 seconds.</p>
-<p>To view how it's done, please take a look at the js and html files</p>
+<p>To view how it's done, please take a look at the comments in the js and html files</p>
 
 <i>3. Sending messages</i>
 <p>When a user has found someone who can help her she can send a text by tabbing the button. Currently a textmessage will be sent automatically. This is because not all people want their phonenumber to be public.</p>
-<p>To view how it's done, please take a look at the js and html files</p>
+<p>To view how it's done, please take a look at the comments in the js and html files</p>
+
+<i>4. Adjust Profile </i>
+<p>To adjust your profile one has to go to the menu en tab Profile. The user can add a profile pic, adjust her username, chose "in need of sanitary pads" or "in possession of sanitary pads", the brand and sort.</p>
+<p>To view how it's done, please take a look at the comments in the js and html files</p>
