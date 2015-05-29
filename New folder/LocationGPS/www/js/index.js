@@ -59,8 +59,7 @@ $("#registerForm").submit(function(){
 			window.location = "listoftargets.html";
 		},
 		error: function(data) {
-			alert("Probeer opnieuw");
-			window.location = "listoftargets.html";
+			alert("Gebruikersnaam is al in gebruik, probeer opnieuw!");
 		}
 	});
 	
