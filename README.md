@@ -14,5 +14,5 @@
 <p>To view how it's done, please take a look at the js and html files</p>
 
 <i>3. Sending messages</i>
-<p>When a user has found someone who can help her she can send a text by tabbing the button. A text will be sent automatically. </p>
+<p>When a user has found someone who can help her she can send a text by tabbing the button. Currently a textmessage will be sent automatically. This is because not all people want their phonenumber to be public.</p>
 <p>To view how it's done, please take a look at the js and html files</p>
