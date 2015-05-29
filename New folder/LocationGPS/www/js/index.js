@@ -32,11 +32,11 @@ $("#loginForm").submit(function(){
 		url: "http://maritapeeters.nl/periodsaver/login.php?name=" + name + "&password=" + password,
 		dataType: "json",
 		success: function(data) {
-			alert(data);
+			alert(data + "Je bent ingelogd!");
 			window.location = "listoftargets.html";
 		},
 		error: function(data) {
-			alert(data);
+			alert("Gegevens kloppen niet");
 			//window.location = "index.html";
 		}
 	});	
