@@ -32,8 +32,9 @@ $("#loginForm").submit(function(){
 		url: "http://maritapeeters.nl/periodsaver/login.php?name=" + name + "&password=" + password,
 		dataType: "json",
 		success: function(data) {
-			alert(data + "Je bent ingelogd!");
-			window.location = "listoftargets.html";
+			alert("Je bent ingelogd!");
+			getUserData(data);
+			window.location = "listoftargets.html?userid=" + userData;
 		},
 		error: function(data) {
 			alert("Gegevens kloppen niet");
@@ -55,8 +56,7 @@ $("#registerForm").submit(function(){
 		url: "http://maritapeeters.nl/periodsaver/save.php?name=" + name + "&password=" + password,
 		dataType: "json",
 		success: function(data) {
-			alert(data);
-			window.location = "listoftargets.html";
+			window.location = "index.html";
 		},
 		error: function(data) {
 			alert("Gebruikersnaam is al in gebruik, probeer opnieuw!");
@@ -70,3 +70,22 @@ $('#register').click(function(){
 	window.location = "register.html";
 	return false;
 });
+
+
+//FUNCTIONS
+function getUserData(data){
+	$.ajax({
+		type: "POST",
+		url: "http://maritapeeters.nl/periodsaver/save.php?name=" + name + "&password=" + password,
+		dataType: "json",
+		success: function(data) {
+			window.location = "index.html";
+		},
+		error: function(data) {
+			alert("Gebruikersnaam is al in gebruik, probeer opnieuw!");
+		}
+	});
+	
+	return userData;
+}
+
