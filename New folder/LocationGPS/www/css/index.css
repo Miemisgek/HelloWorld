@@ -180,5 +180,31 @@ padding: 21px;
 	font-size: 16px;
 }
 
+/*IONIC FRAMEWORK*/
+.view-container{
+	font-family: 'HeroLight';
+}
+
+.bar.bar-stable{
+	background-color: #f678c5;
+	border: none;
+  	font-family: 'HeroLight';
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+}
+
+.bar.bar-header h1{
+  	font-family: 'HeroLight';
+	text-transform: uppercase;	
+	text-align: center;
+	padding: 0px;
+}
+
+.item{
+	border: none;
+}
+	
+}
 /*END MARITA*/
 

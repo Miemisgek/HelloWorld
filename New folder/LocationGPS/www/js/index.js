@@ -33,8 +33,9 @@ $("#loginForm").submit(function(){
 		dataType: "json",
 		success: function(data) {
 			alert("Je bent ingelogd!");
-			getUserData(data);
-			window.location = "listoftargets.html?userid=" + userData;
+			//getUserData(data);
+			//window.location = "dashboard.html?userid=" + userData;
+			window.location = "dashboard.html";
 		},
 		error: function(data) {
 			alert("Gegevens kloppen niet");
