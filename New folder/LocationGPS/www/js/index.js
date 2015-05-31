@@ -1,27 +1,7 @@
-/*var onSuccess = function(position) {
-		alert('Latitude: '          + position.coords.latitude          + '\n' +
-			  'Longitude: '         + position.coords.longitude         + '\n' +
-			  'Altitude: '          + position.coords.altitude          + '\n' +
-			  'Accuracy: '          + position.coords.accuracy          + '\n' +
-			  'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-			  'Heading: '           + position.coords.heading           + '\n' +
-			  'Speed: '             + position.coords.speed             + '\n' +
-			  'Timestamp: '         + position.timestamp                + '\n');
-	};
-
-	// onError Callback receives a PositionError object
-	//
-	function onError(error) {
-		alert('code: '    + error.code    + '\n' +
-			  'message: ' + error.message + '\n');
-	}
-
-navigator.geolocation.getCurrentPosition(onSuccess, onError);*/
-
 $("#loginForm").submit(function(){
 	var name = $('#name').val();
     var password = $('#password').val();
-
+	
 	if (name == "" || password == "") {
 	alert("Vul alles in aub");
 	return false;
@@ -72,7 +52,6 @@ $('#register').click(function(){
 	return false;
 });
 
-
 //FUNCTIONS
 function getUserData(data){
 	$.ajax({
@@ -89,4 +68,3 @@ function getUserData(data){
 	
 	return userData;
 }
-
