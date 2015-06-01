@@ -132,3 +132,58 @@ angular.module('starter.controllers', [])
 	}
 });*/
 
+// Andere manier Geo Location Fail
+
+/* 
+var app = angular.module('my-sweet-app', []);
+
+app.controller('HomeController', function($scope, $window) {
+	$window.navigator.geoLocation.getCurrentPosition(function(position){
+		var lat = position.coords.latitude;
+		var lng = position.coords.longitude;
+		
+		$scope.appy(function(){ 
+			$scope.lat = lat;
+			$scope.lng = lng;
+			
+		});
+	});
+});
+
+*/
+
+.controller('LocationCtrl', function($scope) {
+	$scope.getLocation = function () { 
+		if (navigator.geolocation) { 
+			navigator.geolocation.getCurrentPosition($scope.showPosition, $scope.showError); 
+		} 
+		else { 
+			$scope.error = "Geolocation is not supported by this browser."; 
+		} 
+	} 
+		$scope.getLocation();
+		
+	$scope.showPosition = function (position) { 
+		var lat = position.coords.latitude; 
+		var lon = position.coords.longitude; 
+		
+		alert(lat); 
+		alert(lon); 
+	}
+	
+	$scope.showError = function (error) { 
+		switch (error.code) { 
+			case error.PERMISSION_DENIED: $scope.error = "User denied the request for Geolocation." 
+			break; 
+			case error.POSITION_UNAVAILABLE: $scope.error = "Location information is unavailable." 
+			break; 
+			case error.TIMEOUT: $scope.error = "The request to get user location timed out." 
+			break; 
+			case error.UNKNOWN_ERROR: $scope.error = "An unknown error occurred." 
+			break; 
+		} 
+			$scope.$apply(); 
+	}
+		
+});
+
