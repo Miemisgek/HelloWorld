@@ -14,7 +14,7 @@ $("#loginForm").submit(function(){
 		success: function(data) {
 			alert("Je bent ingelogd!");
 			//getUserData(data);
-			//window.location = "dashboard.html?userid=" + userData;
+			window.location = "dashboard.html?userid=" + data;
 			window.location = "dashboard.html";
 		},
 		error: function(data) {
@@ -38,6 +38,7 @@ $("#registerForm").submit(function(){
 		url: "http://maritapeeters.nl/periodsaver/save.php?name=" + name + "&password=" + password + "&telephone=" + telephone,
 		dataType: "json",
 		success: function(data) {
+			alert("Je bent geregistreerd! Log nu in!");
 			window.location = "index.html";
 		},
 		error: function(data) {
