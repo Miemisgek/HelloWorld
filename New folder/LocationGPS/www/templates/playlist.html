@@ -1,4 +1,4 @@
-<ion-view view-title="Superwoman">
+<ion-view view-title="Superwoman" ng-app="app">
   <ion-content>
  <ion-list>
       <ion-item ng-repeat="data in user">
@@ -18,6 +18,10 @@
                 {{data.telefoonnummer}} 
                 </section>			        
       </ion-item>
+	  <ion-item ng-controller="LocationCtrl">
+		<p>Location: ({{lat}}, {{lng}})</p>
+	  </ion-item>
+	  
     </ion-list> 
 </ion-content>
 </ion-view> 

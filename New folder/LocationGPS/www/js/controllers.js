@@ -132,12 +132,12 @@ angular.module('starter.controllers', [])
 	}
 });*/
 
-// Andere manier Geo Location Fail
+// Test 123 GEO LOCATION
 
-/* 
-var app = angular.module('my-sweet-app', []);
 
-app.controller('HomeController', function($scope, $window) {
+var app = angular.module('app', []);
+
+app.controller('LocationCtrl', function($scope, $window) {
 	$window.navigator.geoLocation.getCurrentPosition(function(position){
 		var lat = position.coords.latitude;
 		var lng = position.coords.longitude;
@@ -150,7 +150,11 @@ app.controller('HomeController', function($scope, $window) {
 	});
 });
 
-*/
+
+
+
+
+/* ONE WAY OR ANOTHER IM GONNA FIND YOU!
 
 var module = angular.module('app', ['ionic'])
 
@@ -187,7 +191,7 @@ module.controller('LocationCtrl', function($scope) {
 			$scope.$apply(); 
 	}
 		
-});
+}); */
 
 
 
