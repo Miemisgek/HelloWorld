@@ -152,7 +152,9 @@ app.controller('HomeController', function($scope, $window) {
 
 */
 
-.controller('LocationCtrl', function($scope) {
+var module = angular.module('app', ['ionic'])
+
+module.controller('LocationCtrl', function($scope) {
 	$scope.getLocation = function () { 
 		if (navigator.geolocation) { 
 			navigator.geolocation.getCurrentPosition($scope.showPosition, $scope.showError); 
@@ -186,4 +188,6 @@ app.controller('HomeController', function($scope, $window) {
 	}
 		
 });
+
+
 
