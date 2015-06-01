@@ -42,13 +42,19 @@ angular.module('starter.controllers', [])
 
 .controller('DashboardCtrl', function($scope) {
   $scope.playlists = [
-    { title: 'Reggae', distance: '75' , id: 1 },
-    { title: 'Chill', distance: '90', id: 2 },
-    { title: 'Dubstep', distance: '100', id: 3 }
+    { title: 'Lisa', distance: '75' , id: 1 },
+    { title: 'Anne', distance: '90', id: 2 },
+    { title: 'Maria', distance: '100', id: 3 }
   ];
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+	$scope.user = [
+    { title: $stateParams["playlistTitle"]},
+	{ afbeelding: 'imgUrl'},
+	{ gear: 'gear'},
+	{ telefoonnummer: 'gear'}
+  	];
 });
 
 // Geo location
@@ -92,7 +98,8 @@ angular.module('starter.controllers', [])
       // error
     });
 });*/
-.controller('LocationCtrl', function($scope) {
+
+/*.controller('LocationCtrl', function($scope) {
 	$scope.getLocation = function () { 
 		if (navigator.geolocation) { 
 			navigator.geolocation.getCurrentPosition($scope.showPosition, $scope.showError); 
@@ -123,6 +130,5 @@ angular.module('starter.controllers', [])
 		} 
 		$scope.$apply(); 
 	}
-	
-});
+});*/
 

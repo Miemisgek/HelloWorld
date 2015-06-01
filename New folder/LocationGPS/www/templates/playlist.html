@@ -1,5 +1,12 @@
-<ion-view view-title="Superwoman" ng-controller="LocationCtrl">
+<ion-view view-title="Superwoman">
   <ion-content>
-    
+ <ion-list>
+      <ion-item ng-repeat="data in user">    
+                {{data.title}} 
+                {{data.afbeelding}} 	
+                {{data.gear}} 	
+                {{data.telefoonnummer}} 				        
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
