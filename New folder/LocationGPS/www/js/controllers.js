@@ -51,14 +51,15 @@ angular.module('starter.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
 
-module.controller('GeoCtrl', function($cordovaGeolocation) {
+// Geo location
+/*module.controller('GeoCtrl', function($cordovaGeolocation) {
 
   var posOptions = {timeout: 10000, enableHighAccuracy: false};
   $cordovaGeolocation
     .getCurrentPosition(posOptions)
     .then(function (position) {
       var lat  = position.coords.latitude
-      var long = position.coords.longitude
+      var lon = position.coords.longitude
     }, function(err) {
       // error
     });
@@ -78,7 +79,7 @@ module.controller('GeoCtrl', function($cordovaGeolocation) {
     },
     function(position) {
       var lat  = position.coords.latitude
-      var long = position.coords.longitude
+      var lon = position.coords.longitude
   });
 
 
@@ -90,4 +91,38 @@ module.controller('GeoCtrl', function($cordovaGeolocation) {
       }, function (error) {
       // error
     });
+});*/
+.controller('LocationCtrl', function($scope) {
+	$scope.getLocation = function () { 
+		if (navigator.geolocation) { 
+			navigator.geolocation.getCurrentPosition($scope.showPosition, $scope.showError); 
+		} 
+		else { 
+			$scope.error = "Geolocation is not supported by this browser."; 
+		} 
+	} 
+	$scope.getLocation();
+	
+	$scope.showPosition = function (position) { 
+		var lat = position.coords.latitude; 
+		var lon = position.coords.longitude; 
+		alert(lat); 
+		alert(lon); 
+	}
+	
+	$scope.showError = function (error) { 
+	switch (error.code) { 
+			case error.PERMISSION_DENIED: $scope.error = "User denied the request for Geolocation." 
+			break; 
+			case error.POSITION_UNAVAILABLE: $scope.error = "Location information is unavailable." 
+			break; 
+			case error.TIMEOUT: $scope.error = "The request to get user location timed out." 
+			break; 
+			case error.UNKNOWN_ERROR: $scope.error = "An unknown error occurred." 
+			break; 
+		} 
+		$scope.$apply(); 
+	}
+	
 });
+
