@@ -28,13 +28,14 @@ $("#loginForm").submit(function(){
 $("#registerForm").submit(function(){
 	var name = $('#name').val();
     var password = $('#password').val();
+	var telephone = $('#telephone').val();
 	
 	if (name == "" || password == "") {
 	alert("Vul een gebruikersnaam en wachtwoord in");
 	}		
 	$.ajax({
 		type: "GET",
-		url: "http://maritapeeters.nl/periodsaver/save.php?name=" + name + "&password=" + password,
+		url: "http://maritapeeters.nl/periodsaver/save.php?name=" + name + "&password=" + password + "&telephone=" + telephone,
 		dataType: "json",
 		success: function(data) {
 			window.location = "index.html";
