@@ -132,8 +132,8 @@ angular.module('starter.controllers', [])
 	}
 });*/
 
-// Test 123 GEO LOCATION
-
+// Test 123 GEO LOCATION, yet another fail
+/*
 
 var app = angular.module('app', []);
 
@@ -151,7 +151,7 @@ app.controller('LocationCtrl', function($scope, $window) {
 });
 
 
-
+*/
 
 
 /* ONE WAY OR ANOTHER IM GONNA FIND YOU!
