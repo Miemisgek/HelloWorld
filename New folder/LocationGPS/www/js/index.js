@@ -70,7 +70,7 @@ function getUserData(data){
 	
 	return userData;
 }
-
-setTimeout(function() {
+//SPLASH
+	setTimeout(function() {
     $('#splash').fadeOut('slow');
-}, 1500); // <-- time in milliseconds
+	}, 1500);

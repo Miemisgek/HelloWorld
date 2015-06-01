@@ -197,6 +197,53 @@ padding: 21px;
 	position: absolute;
 	top: 0;
 	left: 0;
+	display: block;
+}
+
+.user_name, .user_image{
+	text-align: center;
+	font-size: 24px;
+	text-transform:uppercase;
+}
+
+.user_image img{
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+  	border: 3px solid #f890d0;
+}
+
+.user_gear{
+	text-align: center;
+	margin-top: 20px;
+	border-bottom: 2px solid #f890d0;
+	border-radius: 2px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.contact_me{
+	text-align: center;
+	width: 100%;
+	background-color: #f890d0;
+	margin-top: 20px;
+	font-family: 'HeroLight';
+	color: white;
+	text-transform: uppercase;
+}
+
+.user_number{
+	text-align: center;	
+	margin-top: 20px;
+	font-size: 24px;
+}
+
+.numberhide{
+	display: none;	
+}
+
+.numbershow{
+	display: block;
 }
 	
 /*END MARITA*/

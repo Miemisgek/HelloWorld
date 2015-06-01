@@ -42,19 +42,19 @@ angular.module('starter.controllers', [])
 
 .controller('DashboardCtrl', function($scope) {
   $scope.playlists = [
-    { title: 'Lisa', distance: '75' , id: 1 },
+    { title: 'Marita', distance: '75' , id: 1 },
     { title: 'Anne', distance: '90', id: 2 },
-    { title: 'Maria', distance: '100', id: 3 }
+    { title: 'Lisa', distance: '100', id: 3 }
   ];
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 	$scope.user = [
-    { title: $stateParams["playlistTitle"]},
-	{ afbeelding: 'imgUrl'},
-	{ gear: 'gear'},
-	{ telefoonnummer: 'gear'}
+    { title: $stateParams["playlistTitle"], afbeelding: 'https://yt3.ggpht.com/-1_-y_LjEf7Y/AAAAAAAAAAI/AAAAAAAAAAA/VTzJV_9Gkiw/s900-c-k-no/photo.jpg', gear: 'Always extra plus',telefoonnummer: '0653282684', id: 1}
   	];
+	$scope.contactme = function() {
+	alert('hy');
+ 	 };
 });
 
 // Geo location
