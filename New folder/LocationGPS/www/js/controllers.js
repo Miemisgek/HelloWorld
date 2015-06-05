@@ -1,6 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $interval) {
+	callAtInterval();
 	$interval(callAtInterval, 300000);
   // Form data for the login modal
   //$scope.loginData = {};
@@ -62,12 +63,15 @@ angular.module('starter.controllers', [])
 function callAtInterval() {
 	//now send this value to the database!
 	  window.navigator.geolocation.getCurrentPosition(function(position) {
-                $scope.$apply(function() {
+		  		var latitude = position.coords.latitude;
+				var longitude = position.coords.longitude;
+				console.log(latitude + ' ' + longitude);
+/*                $scope.$apply(function() {
 					$scope.latitude = position.coords.latitude;
                     $scope.longitude = position.coords.longitude;
                     $scope.accuracy = position.coords.accuracy;
 					alert($scope.latitude);
-                });
+                });*/
                 }, function(error) {
                     alert(error);
             });
