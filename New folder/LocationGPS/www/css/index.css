@@ -270,6 +270,10 @@ font-family: 'HeroLight';
 .numbershow{
 	display: block;
 }
+
+.item-complex .item-content, .item-radio .item-content{
+	padding: 16px ! !important;
+}
 	
 /*END MARITA*/
 
