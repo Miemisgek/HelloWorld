@@ -1,15 +1,14 @@
 angular.module('starter.controllers', ['ngRoute'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $interval, $http, $location) {
-	
-	callAtInterval($scope, $http);
-	$interval(callAtInterval($scope, $http), 300000);
-	console.log($location.search('userid'));
+	var userId = "30";
+	callAtInterval($scope, $http, userId);
+	$interval(callAtInterval($scope, $http, userId), 300000);
+	//console.log($location.search('userid'));
 	//check which user it is
 	//checkuser();
 	
-	var userId = "31";
-	console.log(userId);
+	
   // Form data for the login modal
   //$scope.loginData = {};
 	
@@ -67,13 +66,13 @@ angular.module('starter.controllers', ['ngRoute'])
        }
 });
 
-function callAtInterval($scope, $http) {
+function callAtInterval($scope, $http, userId) {
 	//now send this value to the database!
 	  window.navigator.geolocation.getCurrentPosition(function(position) {
 		  		var latitude = position.coords.latitude;
 				var longitude = position.coords.longitude;
 				
-				$http.post("http://maritapeeters.nl/periodsaver/postdata.php?latitude="+latitude+"&longitude="+longitude).success(function(data){
+				$http.post("http://maritapeeters.nl/periodsaver/postdata.php?userId="+userId+"&latitude="+latitude+"&longitude="+longitude).success(function(data){
 				$scope.tasks = data;
 				});
                 }, function(error) {
