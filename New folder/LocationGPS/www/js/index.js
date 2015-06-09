@@ -13,9 +13,7 @@ $("#loginForm").submit(function(){
 		dataType: "json",
 		success: function(data) {
 			alert("Je bent ingelogd!");
-			//getUserData(data);
 			window.location = "dashboard.html?userid=" + data;
-			window.location = "dashboard.html";
 		},
 		error: function(data) {
 			alert("Gegevens kloppen niet");
