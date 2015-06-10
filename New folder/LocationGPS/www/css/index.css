@@ -212,10 +212,11 @@ font-family: 'HeroLight';
 }
 
 #splash{
-	background-image: url("img/logo3_Beeldmerk2.gif");
+	background-image: url("img/logo3b.gif");
 	background-position: center 205px;
 	background-repeat:no-repeat;
 	background-color: white;
+	background-size:400px, auto;
 	width: 100%;
 	height: 100%;
 	position: absolute;
