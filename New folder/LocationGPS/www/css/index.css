@@ -53,11 +53,17 @@ background-color: #f678c5;
 top:0;
 } */
 
+.menuLogo{ 
+width:50px;
+float:left;
+}
+
 .officialheader{ 
 width:auto; 
 height:75px;
 background-color: #f890d0;
 font-family: 'HeroLight';
+
 }
 
 
@@ -90,7 +96,7 @@ input.fields{
   color:#f890d0;
 }
 
-#submitLogin{ 
+#submitLogin, #submitRegister{ 
   margin: 25px auto;
   display: block;
   width: 100%;
@@ -165,6 +171,10 @@ padding: 21px;
 	font-family: 'slim_joeregular';
 	font-size: 29px;
 	text-transform: uppercase;
+	background-image: url("../img/MenuLogo.png");
+	background-position: 100px, 25px;
+	background-repeat:no-repeat;
+	background-size:40px, auto;
 }
 
 .tabblad{
