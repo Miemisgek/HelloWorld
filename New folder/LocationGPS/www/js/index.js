@@ -14,6 +14,7 @@ $("#loginForm").submit(function(){
 		success: function(data) {
 			alert("Je bent ingelogd!");
 			window.location = "dashboard.html?userid=" + data;
+			localStorage.id = data;
 		},
 		error: function(data) {
 			alert("Gegevens kloppen niet");
