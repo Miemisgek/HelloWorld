@@ -299,9 +299,7 @@ width: 100%;
 }
 	
 .menuleft .item{
-	border-bottom: 1px solid #e8e8e8;
-	margin-bottom: 1px;
-	background-color: #F9F9F9;
+	padding: 15px;
 }
 
 .menuleft .item:hover{
@@ -309,5 +307,8 @@ width: 100%;
 }
 /*END MARITA*/
 
-
+.profileIcon{ 
+float:left;
+width:50px;
+}
 
