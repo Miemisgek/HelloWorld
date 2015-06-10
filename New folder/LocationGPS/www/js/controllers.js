@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['ngRoute','ngStorage'])
+angular.module('starter.controllers', ['ngRoute'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $interval, $http, $location) {
 	//var myParam = location.search.split('myParam=')[1];
