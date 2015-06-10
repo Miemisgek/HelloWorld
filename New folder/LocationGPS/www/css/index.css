@@ -244,17 +244,17 @@ font-family: 'HeroLight';
 	display: block;
 }
 
-.user_name, .user_image{
+.user_name{
 	text-align: center;
 	font-size: 24px;
 	text-transform:uppercase;
+	text-align: center;
 }
 
 .user_image img{
-	width: 100px;
-	height: 100px;
-	border-radius: 10px;
-  	border: 3px solid #f890d0;
+width: 100%;
+  height: auto;
+  top:0;
 }
 
 .user_gear{
@@ -269,12 +269,15 @@ font-family: 'HeroLight';
 
 .contact_me{
 	text-align: center;
-	width: 100%;
+	width: 90%;
 	background-color: #f890d0;
-	margin-top: 20px;
+	margin: 20px auto;
+	display:block;
 	font-family: 'HeroLight';
 	color: white;
 	text-transform: uppercase;
+	border-radius:5px;
+	border:none;
 }
 
 .user_number{
