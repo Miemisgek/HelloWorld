@@ -13,8 +13,8 @@ $("#loginForm").submit(function(){
 		dataType: "json",
 		success: function(data) {
 			alert("Je bent ingelogd!");
-			window.location = "dashboard.html?userid=" + data;
-			localStorage.id = data;
+			window.location = "dashboard.html#/app/dashboard?userid=" + data;
+			//localStorage.id = data;
 		},
 		error: function(data) {
 			alert("Gegevens kloppen niet");
