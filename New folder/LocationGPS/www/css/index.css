@@ -161,12 +161,20 @@ margin: 25px 0px;
 }
 
 label{ 
-display:block;
-width:90%; 
-height:50px;
-font-family: 'HeroLight';
-font-size: 22px;
+display: block;
+  width: 234px;
+  height: 25px;
+  font-family: 'HeroLight';
+  font-size: 22px;
+  float: right;
+  margin-right: 200px;
 } 
+
+input#helpen, input#nodig{ 
+  float: left;
+  height: 10px;
+  width: 15px;
+}
 
 .line{ 
 width:100%;
