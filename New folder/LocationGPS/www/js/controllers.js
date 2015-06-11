@@ -1,13 +1,17 @@
 angular.module('starter.controllers', ['ngRoute'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $interval, $http, $location) {
-	//var myParam = location.search.split('myParam=')[1];
-	//console.log(myParam);
-	//var value = localStorage.id;
-	//console.log(value);
-	var userId = "30";
-	var paramValue = $location.search().userid;
-	console.log(paramValue);
+	// GET USERID FROM URL
+	var userid = $location.search();
+	for(key in userid) {
+        var value = userid[key];
+        //do something with value;
+		var userId = value;
+		console.log(userId);
+	}
+	//var userId = "30";
+	//var paramValue = $location.search().userid;
+	//console.log(paramValue);
 	callAtInterval($scope, $http, userId);
 	$interval(callAtInterval($scope, $http, userId), 300000);
 	//console.log($location.search('userid'));
