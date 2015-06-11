@@ -4676,7 +4676,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
  * --------------------------------------------------
  */
 .item {
-  background-color: #fff;
+  background-color:#f9f8f8;
   color: #444;
   position: relative;
   z-index: 2;
@@ -4689,8 +4689,9 @@ ion-tabs.tabs-color-active-dark .tab-item {
     font-size: 16px;
     font-weight: normal; }
   .item h3 {
-    margin: 0 0 4px 0;
-    font-size: 14px; }
+    margin: 4px 0;
+    font-size: 22px;
+    font-family: 'HeroLight'; }
   .item h4 {
     margin: 0 0 4px 0;
     font-size: 12px; }
@@ -4820,7 +4821,7 @@ a.item {
   z-index: 2;
   padding: 16px 16px 16px 16px;
   border: none;
-  background-color: white; }
+  background-color: none; }
 
 a.item-content {
   display: block;
@@ -5316,8 +5317,8 @@ a.item-content {
  */
 .list {
   position: relative;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-left: 0;
   margin-bottom: 20px; }
 

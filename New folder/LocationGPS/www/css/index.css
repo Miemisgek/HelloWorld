@@ -44,8 +44,8 @@
 }
 
 body{
-font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; 
-background-color:#f2f2f2;
+
+background-color:#f9f8f8;
 margin:0;
 padding:0;
 }
@@ -154,12 +154,32 @@ input.button{
   border-radius:5px;
 }
 
+legend{ 
+margin: 25px 0px;
+ font-family: 'HeroLight';
+  font-size: 22px;
+}
+
+label{ 
+display:block;
+width:90%; 
+height:50px;
+font-family: 'HeroLight';
+font-size: 22px;
+} 
+
 .line{ 
 width:100%;
 height:1px;
 background-color:#e8e8e8;
 float:right;
 margin-top:10px;
+}
+
+.lineProfile{ 
+width:100%;
+height:1px;
+background-color:#e8e8e8;
 }
 
 h1{ 
@@ -172,7 +192,7 @@ padding: 21px;
 }
 
 
-/*MARITA + edits Demi*/
+
 .titel{
 	background-color: #f890d0;
 	width:100%;
@@ -202,8 +222,10 @@ padding: 21px;
 .member_image{
 	width: 75px;
 	height: 75px;
-	background-color: black;
-	float:left;	
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url("img/demi.jpg") no-repeat;	
 }
 
 .member_name{
@@ -258,25 +280,65 @@ font-family: 'HeroLight';
 }
 
 .user_name{
-	text-align: center;
-	font-size: 24px;
-	text-transform:uppercase;
-	text-align: center;
+position: absolute; 
+top: 320px; 
+left: 20px; 
+width: 100%; 
+text-transform: uppercase; 
+font-family: 'slim_joeregular';
+font-size: 29px;
+color:white;
+text-shadow: 0px 1px #6e6e6e;
 }
 
 .user_image img{
-width: 100%;
+  width: 100%;
   height: auto;
   top:0;
+   position: relative;
 }
 
 .user_gear{
-	text-align: center;
-	margin-top: 20px;
-	border-bottom: 2px solid #f890d0;
-	border-radius: 2px;
+	/*text-align: center;
+	margin-top: 20px; 
 	height: 40px;
-	line-height: 40px;
+	line-height: 40px;*/
+padding-top: 4px;
+  margin: 30px auto;
+  height: 100px;
+  line-height: 0px;
+  width: 90%;
+  background-color:white;
+  border-radius: 5px;
+-webkit-box-shadow: 0px 0px 5px 0px rgba(224,221,221,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(224,221,221,1);
+box-shadow: 0px 0px 5px 0px rgba(224,221,221,1);
+}
+
+.user_distance{ 
+padding-top: 4px;
+  margin: 30px auto;
+  height: 100px;
+  line-height: 0px;
+  width: 90%;
+  background-color:white;
+  border-radius: 5px;
+-webkit-box-shadow: 0px 0px 5px 0px rgba(224,221,221,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(224,221,221,1);
+box-shadow: 0px 0px 5px 0px rgba(224,221,221,1);
+}
+
+h3.profileHeadings{
+display:block; 
+margin-left:15px;
+font-size: 22px;
+font-family: 'HeroLight'; 
+text-align:left;
+/*color:#f890d0;*/
+}
+
+.profileDescription{
+margin: 30px 0px 0px 15px;
 }
 
 
@@ -294,6 +356,7 @@ width: 100%;
 }
 
 .user_number{
+display:none; /* Wordt niet getoond, kan nog in een box gedisplayed worden */
 	text-align: center;	
 	margin-top: 20px;
 	font-size: 24px;
@@ -318,7 +381,7 @@ width: 100%;
 .menuleft .item:hover{
 	background-color: #E5E5E5;
 }
-/*END MARITA*/
+
 
 
 
