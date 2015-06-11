@@ -2599,7 +2599,8 @@ body.grade-b, body.grade-c {
   padding-top: 1px;
   margin-bottom: -1px;
   width: auto;
-  height: auto; }
+  height: auto;
+  background-color:#f9f8f8;}
 
 .menu .scroll-content.scroll-content-false {
   z-index: 11; }
@@ -2776,7 +2777,7 @@ ion-infinite-scroll {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #f9f8f8;
   overflow: hidden; }
 
 .view-container {
