@@ -137,6 +137,49 @@ input.fields{
   cursor: pointer;
 }
 
+/*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+input[type=radio] {
+	display: none;
+	width: auto;
+	float: none;
+}
+ 
+/*
+  Change the look'n'feel of labels (which are adjacent to radiobuttons).
+  Add some margin, padding to label
+*/
+input[type=radio] + label {
+    display:block;
+    padding: 15px 15px;
+	margin: 5px 0;
+	border-radius: 5px;
+	color: black;
+    font-size: 22px;
+	line-height: 22px;
+	font-family: 'HeroLight';
+	height: 50px;
+	width: 100%;
+	/* 
+ 
+  padding: 15px 0px;
+  font-family: 'HeroLight';
+  font-size: 22px;
+  border: solid 1px #e4e3e3;
+  
+  color: #f890d0; */
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+input[type=radio]:checked + label { 
+   background-image: none;
+    background-color:#ebebeb;
+}
+
 input[placeholder]{
 text-align:center;
 }
@@ -154,12 +197,13 @@ input.button{
   border-radius:5px;
 }
 
+
 legend{ 
 margin: 25px 0px;
  font-family: 'HeroLight';
   font-size: 22px;
 }
-
+/*
 label{ 
 display: block;
   width: 234px;
@@ -175,7 +219,7 @@ input#helpen, input#nodig{
   height: 10px;
   width: 15px;
 }
-
+*/
 .line{ 
 width:100%;
 height:1px;

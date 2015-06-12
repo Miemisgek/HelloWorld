@@ -52,7 +52,7 @@ angular.module('starter.controllers', ['ngRoute'])
   
   // When someone is logging out, there comes an alert and returns to the index.html
   $scope.logout = function() {
-	alert("Je bent uitgelogd!");
+	//alert("Je bent uitgelogd!");
    	window.location = "index.html";
   };
   

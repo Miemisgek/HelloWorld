@@ -12,7 +12,7 @@ $("#loginForm").submit(function(){
 		url: "http://maritapeeters.nl/periodsaver/login.php?name=" + name + "&password=" + password,
 		dataType: "json",
 		success: function(data) {
-			alert("Je bent ingelogd!");
+			//alert("Je bent ingelogd!");
 			window.location = "dashboard.html#/app/dashboard?userid=" + data;
 			//localStorage.id = data;
 		},
@@ -77,13 +77,13 @@ function getUserData(data){
 document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady(){
 setTimeout(function(){
-		alert(cordova);
+		//alert(cordova);
 var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
 alert(telephoneNumber);
 telephoneNumber.get(function(result) {
         alert("result = " + result);
     }, function() {
-        alert("error");
+        alert("Telefo");
     });
 	
 	}, 5000);

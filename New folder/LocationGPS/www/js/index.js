@@ -12,7 +12,7 @@ $("#loginForm").submit(function(){
 		url: "http://maritapeeters.nl/periodsaver/login.php?name=" + name + "&password=" + password,
 		dataType: "json",
 		success: function(data) {
-			alert("Je bent ingelogd!");
+			//alert("Je bent ingelogd!");
 			window.location = "dashboard.html#/app/dashboard?userid=" + data;
 			//localStorage.id = data;
 		},
