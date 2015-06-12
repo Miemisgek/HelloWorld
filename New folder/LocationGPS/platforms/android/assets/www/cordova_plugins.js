@@ -18,7 +18,8 @@ module.exports.metadata =
 {
     "cordova-plugin-whitelist": "1.0.0",
     "com.cordova.plugins.sms": "0.1.4",
-    "org.apache.cordova.geolocation": "0.3.12"
+    "org.apache.cordova.geolocation": "0.3.12",
+    "com.simonmacdonald.telephonenumber": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

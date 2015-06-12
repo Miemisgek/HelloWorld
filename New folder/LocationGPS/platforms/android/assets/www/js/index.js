@@ -73,3 +73,18 @@ function getUserData(data){
 	setTimeout(function() {
     $('#splash').fadeOut('slow');
 	}, 1500);
+
+document.addEventListener('deviceready', onDeviceReady, false);
+function onDeviceReady(){
+setTimeout(function(){
+		alert(cordova);
+var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
+alert(telephoneNumber);
+telephoneNumber.get(function(result) {
+        alert("result = " + result);
+    }, function() {
+        alert("error");
+    });
+	
+	}, 5000);
+}
