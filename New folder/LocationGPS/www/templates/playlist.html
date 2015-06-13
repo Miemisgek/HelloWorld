@@ -23,12 +23,9 @@
 					</div>
 					<div class="profileDescription">50 m</div>
 				</section>
-               <button class="button contact_me" ng-click="contactme()">
+               <button class="button contact_me" ng-click="contactme({{data.telephone}})">
 					Contact me!
-               </button>
-               <section style="" class="user_number">  	
-					{{data.telephone}} 
-               </section>			        
+               </button>		        
       </ion-item>
 	  
     </ion-list> 

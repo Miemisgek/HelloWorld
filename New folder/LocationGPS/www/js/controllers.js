@@ -52,9 +52,10 @@ angular.module('starter.controllers', ['ngRoute'])
     { title: $stateParams["naam"], afbeelding: 'https://yt3.ggpht.com/-1_-y_LjEf7Y/AAAAAAAAAAI/AAAAAAAAAAA/VTzJV_9Gkiw/s900-c-k-no/photo.jpg', gear: 'Always extra plus',telefoonnummer: '0653282684', id: 1}
   	];*/
 	
-	$scope.contactme = function() {
-	//alert('hy');
-	var message = "hoi";
+	$scope.contactme = function(telephonenumber) {
+	var telephonenumber = "0" + telephonenumber;
+	console.log(telephonenumber);
+	var message = "Hey, ik heb je nodig! Dit gestuurd via Period Saver";
 	 var options = {
             replaceLineBreaks: false, // true to replace \n by a new line, false by default
             android: {
@@ -65,7 +66,7 @@ angular.module('starter.controllers', ['ngRoute'])
 
         var success = function () { alert('Message sent successfully'); };
         var error = function (e) { alert('Message Failed:' + e); };
-        sms.send("0653282684", message, options, success, error);
+        sms.send(telephonenumber, message, options, success, error);
        }
 });
 
