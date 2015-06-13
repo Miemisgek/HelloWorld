@@ -1,6 +1,11 @@
 angular.module('starter.controllers', ['ngRoute'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $interval, $http, $location) {
+	  // When someone is logging out, there comes an alert and returns to the index.html
+  $scope.logout = function() {
+	//alert("Je bent uitgelogd!");
+   	window.location = "index.html";
+  };
 	// GET USERID FROM URL
 	var userid = $location.search();
 	for(key in userid) {
@@ -16,13 +21,6 @@ angular.module('starter.controllers', ['ngRoute'])
 	return $scope.userId;
 
 	//console.log(user);
-
-  
-  // When someone is logging out, there comes an alert and returns to the index.html
-  $scope.logout = function() {
-	//alert("Je bent uitgelogd!");
-   	window.location = "index.html";
-  };
   
 })
 
