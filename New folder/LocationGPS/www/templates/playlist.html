@@ -3,19 +3,19 @@
  <ion-list>
       <ion-item ng-repeat="data in user">
       			<section class="user_image">    
-					<img src="{{data.afbeelding}}" /> 
+					<img src="{{data.image}}" /> 
                 </section>
                 <section class="user_name"> 
 					<span class="icon">
 					&#xf007;
 					</span>
-					{{data.title}}	
+					{{data.naam}}	
                 </section>
                 <section class="user_gear"> 
 					<h3 class="profileHeadings">Merk</h3>
 					<div class="lineProfile">
 					</div>
-					<div class="profileDescription">{{data.gear}}</div>
+					<div class="profileDescription">{{data.verband}}</div>
                 </section>
 				<section class="user_distance">
 					<h3 class="profileHeadings">Afstand</h3>
@@ -27,7 +27,7 @@
 					Contact me!
                </button>
                <section style="" class="user_number">  	
-					{{data.telefoonnummer}} 
+					{{data.telephone}} 
                </section>			        
       </ion-item>
 	  

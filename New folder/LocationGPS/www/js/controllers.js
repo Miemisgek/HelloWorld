@@ -39,10 +39,18 @@ angular.module('starter.controllers', ['ngRoute'])
   ];*/
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-	$scope.user = [
-    { title: $stateParams["playlistTitle"], afbeelding: 'https://yt3.ggpht.com/-1_-y_LjEf7Y/AAAAAAAAAAI/AAAAAAAAAAA/VTzJV_9Gkiw/s900-c-k-no/photo.jpg', gear: 'Always extra plus',telefoonnummer: '0653282684', id: 1}
-  	];
+.controller('PlaylistCtrl', function($scope, $stateParams, $http) {
+	var user = $stateParams["playlistnaam"];
+	//console.log(user);
+	$http.get("http://maritapeeters.nl/periodsaver/getdatauser.php?naam="+user)
+    .success(function (response) {
+		$scope.user = response.records;
+		//console.log($scope.data);
+	});
+	
+/*	$scope.user = [
+    { title: $stateParams["naam"], afbeelding: 'https://yt3.ggpht.com/-1_-y_LjEf7Y/AAAAAAAAAAI/AAAAAAAAAAA/VTzJV_9Gkiw/s900-c-k-no/photo.jpg', gear: 'Always extra plus',telefoonnummer: '0653282684', id: 1}
+  	];*/
 	
 	$scope.contactme = function() {
 	//alert('hy');
