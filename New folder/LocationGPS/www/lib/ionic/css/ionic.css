@@ -3318,7 +3318,9 @@ a.subdued {
     font-size: 17px; }
   .bar-stable .button.button-icon {
     border-color: transparent;
-    background: none; }
+    background: none;
+    color: white;
+	margin-top:3px;}
 
 .bar-positive .button {
   border-color: #0c63ee;
