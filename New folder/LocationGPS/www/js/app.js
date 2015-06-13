@@ -49,6 +49,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.profile', {
+      url: "/dashboard/profile",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/profile.html",
+		  controller: 'ProfileCtrl'
+        }
+      }
+    })
+
  .state('app.single', {
     url: "/dashboard/:playlistnaam",
     views: {
@@ -57,7 +67,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'PlaylistCtrl'
       }
     }
+
   });
+  
   // if none of the above states are matched, use this as the 
   $urlRouterProvider.otherwise('/app/dashboard');
 });

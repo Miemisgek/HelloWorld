@@ -14,6 +14,9 @@ angular.module('starter.controllers', ['ngRoute'])
 	
 	$scope.userId = userId;
 	return $scope.userId;
+
+	//console.log(user);
+
   
   // When someone is logging out, there comes an alert and returns to the index.html
   $scope.logout = function() {
@@ -21,6 +24,20 @@ angular.module('starter.controllers', ['ngRoute'])
    	window.location = "index.html";
   };
   
+})
+
+.controller('ProfileCtrl', function($scope, $http){
+	var userId = $scope.userId;
+	$http.get("http://maritapeeters.nl/periodsaver/getdataprofile.php?id="+userId)
+    .success(function (response) {
+		$scope.profile = response.records;
+		//console.log($scope.data);
+	});
+	
+	$scope.deleteuser = function(){
+	alert("gebruiker verwijderd");
+	window.location = "index.html";	
+	}
 })
 
 .controller('DashboardCtrl', function($scope, $http) {
