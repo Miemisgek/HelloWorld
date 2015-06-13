@@ -7647,7 +7647,9 @@ a.button {
 [nav-bar-transition="ios"] [nav-bar="active"], [nav-bar-transition="ios"] [nav-bar="entering"] {
   z-index: 10; }
   [nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
-    background: transparent; }
+    background: transparent;
+	  box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.3)
+	}
 [nav-bar-transition="ios"] [nav-bar="cached"] {
   display: block; }
   [nav-bar-transition="ios"] [nav-bar="cached"] .header-item {
