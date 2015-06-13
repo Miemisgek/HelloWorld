@@ -7,48 +7,13 @@ angular.module('starter.controllers', ['ngRoute'])
         var value = userid[key];
         //do something with value;
 		var userId = value;
-		console.log(userId);
+		//console.log(userId);
 	}
-	//var userId = "30";
-	//var paramValue = $location.search().userid;
-	//console.log(paramValue);
 	callAtInterval($scope, $http, userId);
 	$interval(callAtInterval($scope, $http, userId), 300000);
-	//console.log($location.search('userid'));
-	//check which user it is
-	//checkuser();
 	
-	
-  // Form data for the login modal
-  //$scope.loginData = {};
-	
-  // Create the login modal that we will use later
-  /*$ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
-
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
-  };
-
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
-  };
-
-  // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);*/
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    /*$timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
-  };*/
+	$scope.userId = userId;
+	return $scope.userId;
   
   // When someone is logging out, there comes an alert and returns to the index.html
   $scope.logout = function() {
@@ -58,12 +23,20 @@ angular.module('starter.controllers', ['ngRoute'])
   
 })
 
-.controller('DashboardCtrl', function($scope) {
-  $scope.playlists = [
+.controller('DashboardCtrl', function($scope, $http) {
+	var userId = $scope.userId;
+	//console.log(userId);
+	$http.get("http://maritapeeters.nl/periodsaver/getdatasuperwomen.php?id="+userId)
+    .success(function (response) {
+		$scope.playlists = response.records;
+		//console.log($scope.data);
+	});
+	
+  /*$scope.playlists = [
     { title: 'Marita', distance: '75' , id: 1 },
     { title: 'Anne', distance: '90', id: 2 },
     { title: 'Lisa', distance: '100', id: 3 }
-  ];
+  ];*/
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {

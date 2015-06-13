@@ -1,15 +1,15 @@
 <ion-view view-title="PeriodSaver">
   <ion-content>       
     <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/dashboard/{{playlist.id}}&{{playlist.title}}">
-              
-					<section class="member_image">   
+      <ion-item ng-repeat="playlist in playlists" href="#/app/dashboard/{{playlist.naam}}&{{playlist.telehpone}}&{{playlist.verband}}&{{playlist.image}}">      
+					<section class="member_image"> 
+                    <img src="{{playlist.image}} " />
 					</section>      
 					<section class="member_name">
-					{{playlist.title}} 
+					{{playlist.naam}} 
 					</section>             
 					<section class="member_distance">
-					{{playlist.distance}} m
+					{{playlist.latitude}} m
 					</section>
 					<div class="line">
 					</div>

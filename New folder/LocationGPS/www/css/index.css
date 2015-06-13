@@ -287,6 +287,14 @@ padding: 21px;
 	float:left;	
 }
 
+.member_image img{
+	width: 75px;
+	height: 75px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;	
+}
+
 .member_name{
 	line-height: 80px;
 	text-transform: uppercase;
