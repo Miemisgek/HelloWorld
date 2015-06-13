@@ -23,7 +23,7 @@
 
 #<i>Plugins</i>
 <p>The plugins used in this app are the following: 
-Cordova
-Simon Macdonald telephonenumber
-Cordova plugin whitelist
+Cordova, 
+Simon Macdonald telephonenumber, 
+Cordova plugin whitelist, 
 Cordova Geolocation</p>
