@@ -33,7 +33,11 @@ angular.module('starter.controllers', ['ngRoute'])
 	});
 	
 	$scope.deleteuser = function(){
-	alert("gebruiker verwijderd");
+	$http.get("http://maritapeeters.nl/periodsaver/delete.php?id="+userId)
+    .success(function (response) {
+		$scope.profile = response.records;
+		//console.log($scope.data);
+	});
 	window.location = "index.html";	
 	}
 })
