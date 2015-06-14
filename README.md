@@ -5,9 +5,14 @@
 
 #<i>Functions</i>
 <i>1. Register & login</i>
-<p>The registerpage is short and simple. The user has to fill in her username and a password and indicate wether she is in need of sanitary pads or if she wants to help someone. The brand and sort are optional.</p>
+<p>The registerpage is short and simple. The user has to fill in her username and a password and <i>indicate wether she is in need of sanitary pads or if she wants to help someone</i>.</p>
 <p>The loginpage is very simple. The user fills in her username and password and tabs the button "login"</p>
-<p>To view how it's done, please take a look at the comments in the js and html files</p>
+<p>To view how it's done, please take a look at the comments in the next files; </br>
+- index.html : Page with inlog form. The values are redirecting towards the function loginForm.submit in the index.js file. This function sends the values to the server (http://maritapeeters.nl/periodsaver/login.php), where it checks if the values are similar with the values in the database. </br>
+- register.html : Page with the register form. The values are redirecting towards the function registerForm.submit in the index.js file. This function sends the values to the server (http://maritapeeters.nl/periodsaver/save.php), where it checks if the values are valid to insert in the database. It checks if the username already excists. When it does it returns an error. </br>
+</br>
+The user can logout in the menu of the application. The logout-function in controller.js -- AppCtrl sends the user back to the index.html </p>
+
 
 <i>2. Displaying list of superwomen</i>
 <p>When a user asks for help a list of potential helpers is shown. This list is based on the distance between the user and women who happen to be in the possession of sanitary pads. The distance is calculated using the latitude and longitude, which will be refreshed every 5 minutes.</p>
