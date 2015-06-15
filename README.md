@@ -5,9 +5,9 @@
 
 #<i>Functions</i>
 <i>1. Register & login</i>
-<p>The registerpage is short and simple. The user has to fill in her username and a password and <i>indicate wether she is in need of sanitary pads or if she wants to help someone</i>.</p>
+<p>The registerpage is short and simple. The user has to fill in her username and a password and indicate which brand of sanitary pads she's got with her.</p>
 <p>The loginpage is very simple. The user fills in her username and password and tabs the button "login"</p>
-<p>To view how it's done, i've summed up the following pages; </br>
+<p>
 - index.html : Page with inlog form. The values are redirecting towards the function loginForm.submit in the index.js file. This function sends the values to the server (http://maritapeeters.nl/periodsaver/login.php), where it checks if the values are similar with the values in the database.When it's similar, the application redirects you towards the dashboard.html with the userID that logged in. If it isn't similar, you'll get an error on the same page. </br>
 - register.html : Page with the register form. The values are redirecting towards the function registerForm.submit in the index.js file. This function sends the values to the server (http://maritapeeters.nl/periodsaver/save.php), where it checks if the values are valid to insert in the database. It checks if the username already excists. When it does it returns an error. </br>
 </br>
@@ -15,10 +15,10 @@ The user can logout in the menu of the application. The logout-function in contr
 
 
 <i>2. Displaying list of superwomen</i>
-<p>When a user asks for help a list of potential helpers is shown. This list is based on the distance between the user and women who happen to be in the possession of sanitary pads. The distance is calculated using the latitude and longitude, which will be refreshed every 5 minutes.</p>
-<p>To view how it's done, i've summed up the following pages; </br>
-- dashboard.html : In this html file it loads the ionic starter module in the app.js and redirects us towards the app/dashboard / DashboardCtrl in controller.js, which loads the listoftargets.html and the app/ AppCtrl, which loads the menu.html</br>
-- menu.html : Ionic view with a slide navigation. It reads the values with AppCtrl. The menulist has the following options; <p> profile - it goes to #/app/dashboard/profile , it opens ProfileCtrl / profile.html. The ProfileCtrl sends the userId to the server (http://maritapeeters.nl/periodsaver/getdataprofile.php), which gives back the values of the user with that userId. Also the profilepage can delete the user with the function deleteuser. deleteuser() sends the userId towards the server(http://maritapeeters.nl/periodsaver/delete.php) and deletes that specific user out of the database.   </p>
+<p>When a user asks for help a list of potential helpers is shown. This list is based on the distance between the user and women who happen to be in the possession of sanitary pads. The distance is calculated using the latitude and longitude, which refreshes every 5 minutes.</p>
+<p>
+- dashboard.html : In this html file the ionic starter module is loaded in the app.js and redirects us towards the app/dashboard / DashboardCtrl in controller.js, which loads the listoftargets.html and the app/ AppCtrl, which loads the menu.html</br>
+- menu.html : Ionic view with a slide navigation. It reads the values with AppCtrl. The menulist has the following options; <p> profile - it goes to #/app/dashboard/profile , it opens ProfileCtrl / profile.html. The ProfileCtrl sends the userId to the server (http://maritapeeters.nl/periodsaver/getdataprofile.php), which gives back the values of the user with that userId. Also the profilepage can delete the user with the function deleteuser(). deleteuser() sends the userId towards the server(http://maritapeeters.nl/periodsaver/delete.php) and deletes that specific user out of the database.   </p>
 <p> superwomen - it goes to default dashboard; #/app/dashboard, it opens dashboard.html  </p>
 <p> Log out -Goes to the logout function in the AppCtrl, it sends the user back to index.html </p>
 The AppCtrl reads the UserId from the URL with $location and returns it in a $scope , so every controller can reach it. Furthermore, the AppCtrl calls the interval-function callAtInterval every 5 minutes, which reads the longitude and latitude from the user and sends it to the server (http://maritapeeters.nl/periodsaver/getdatauser.php), which updates the longitude and latitude in the database.</br>
