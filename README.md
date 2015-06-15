@@ -28,7 +28,7 @@ The AppCtrl reads the UserId from the URL with $location and returns it in a $sc
 
 <i>3. Sending messages</i>
 <p>When a user has found someone who can help her she can send a text by tabbing the button. Currently a textmessage will be sent automatically. This is because not all people want their phonenumber to be public.</p>
-<p>To view how it's done, i've summed up the following pages;</br>
+<p>
 - playlist.html : Ionic view with a list content. When the user clicked on a name in the listoftargets it goes to the following route : #/app/dashboard/{{playlist.naam}}, which redirects it towards playlist.html with the PlaylistCtrl. The PlaylistCtrl reads the username with stateparams and sends the value to the server (http://maritapeeters.nl/periodsaver/getdatauser.php), that gives back the data connected with that username (!important - a username is unique) </br>
 - telephone.js : There is a plugin installed named Cordova SMS Plugin. At the playlist.html there is a button with contactme. When an user clicks on that button it calls the function contactme({{playlist.telephone}}) in PlaylistCtrl, which sends a SMS towards playlist.telephone (Data/telephonenumber from the user in the database)  </br>
 </br>
