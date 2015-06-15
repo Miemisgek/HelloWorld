@@ -47,7 +47,19 @@ angular.module('starter.controllers', ['ngRoute'])
 	//console.log(userId);
 	$http.get("http://maritapeeters.nl/periodsaver/getdatasuperwomen.php?id="+userId)
     .success(function (response) {
-		$scope.playlists = response.records;
+//		$scope.playlists = response.records;
+			response.records.sort(function(a, b){
+			 return a.distance-b.distance;
+			})
+			$scope.playlists = response.records;
+/*		var arr = [];
+		var i = 0;
+		while(i < response.records.length) {
+			arr.push(responser)
+		}*/
+		
+		
+	//	console.log(response.records)	
 		//console.log($scope.data);
 	});
 	
