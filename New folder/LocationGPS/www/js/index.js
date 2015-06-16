@@ -80,11 +80,11 @@ function onDeviceReady(){
 setTimeout(function(){
 		//alert(cordova);
 var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
-alert(telephoneNumber);
+//alert(telephoneNumber);
 telephoneNumber.get(function(result) {
-        alert("result = " + result);
+        //alert("result = " + result);
     }, function() {
-        alert("Telefo");
+        //alert("Telefo");
     });
 	
 	}, 5000);
